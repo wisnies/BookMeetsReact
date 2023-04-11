@@ -1,0 +1,88 @@
+{
+  "React Functional Component without props": {
+    "prefix": "rfc",
+    "body": [
+      "const $1:React.FC = () => {",
+      "   return (",
+      "       <>$1 Component</>",
+      "   )",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Functional Component without props"
+  },
+  "React Functional Component with props": {
+    "prefix": "rfcp",
+    "body": [
+      "interface I$1Props {}",
+      "",
+      "const $1:React.FC<I$1Props> = ({} : I$1Props) => {",
+      "  return (",
+      "    <>$1 Component</>",
+      "  )",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Functional Component with props"
+  },
+  "React Functional Component with Formik Form": {
+    "prefix": "rfcff",
+    "body": [
+      "import {Formik, Form} from 'formik';",
+      "import * as Yup from 'yup';",
+      "",
+      "export interface I$1FormValues {}",
+      "",
+      "interface I$1FormProps {",
+      "  handleSubmit: (values: I$1FormValues) => void",
+      "}",
+      "",
+      "const $1Form:React.FC<I$1FormProps> = ({handleSubmit}: I$1FormProps) => {",
+      "  const initialValues: I$1FormValues = {};",
+      "",
+      "  const validationSchema = Yup.object({});",
+      "",
+      "  const onSubmit = (values: I$1FromValues) => {",
+      "    handleSubmit(values);",
+      "  }",
+      "",
+      "  return (",
+      "    <Formik",
+      "      initialValues={intialValues}",
+      "      validationSchema={validationSchema}",
+      "      onSubmit={onSubmit}",
+      "    >",
+      "      {(formik) => (",
+      "        <Form>",
+      "          <button type='submit' disabled={!formik.isValid}>Submit</button>",
+      "        </Form>",
+      "      )}",
+      "    </Formik>",
+      "  )",
+      "}",
+      "",
+      "export default $1Form;"
+    ],
+    "description": "Functional Component with Formik Form"
+  },
+  "React Functional Component with connected form": {
+    "prefix": "rfccf",
+    "body": [
+      "import $1Form, {I$1FormValues} from './$1';",
+      "",
+      "const Connected$1Form:React.FC = () => {",
+      "",
+      "  const handleSubmit = (values: I$1FormValues) => {",
+      "    console.log(values);",
+      "  }",
+      "",
+      "  return <$1Form handleSubmit={handleSubmit} />",
+      "}",
+      "",
+      "export default Connected$1Form;"
+    ],
+    "description": "Functional Component with connected form"
+  }
+}
