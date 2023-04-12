@@ -14,18 +14,21 @@ export const NavbarContainer = styled.header<INavbarContainerProps>`
   height: 50px;
   width: 100%;
   background-color: ${({ theme }: INavbarContainerProps) =>
-    theme.colors.primary};
-  transition: ${({ theme }: INavbarContainerProps) => theme.transitions.normal};
-  transform: translateY(
-    ${({ show, showOnHover }: INavbarContainerProps) =>
-      show || showOnHover ? 0 : '-50%'}
-  );
+    theme.colors.accentSecondary1};
+  box-shadow: ${({ theme }: INavbarContainerProps) =>
+    theme.shadows.smallToBottom};
 
   @media ${maxWidth.mobileL} {
     height: 120px;
   }
   @media ${maxWidth.laptopL} {
     height: 100px;
+    transition: ${({ theme }: INavbarContainerProps) =>
+      theme.transitions.normal};
+    transform: translateY(
+      ${({ show, showOnHover }: INavbarContainerProps) =>
+        show || showOnHover ? 0 : '-50%'}
+    );
   }
 `;
 export const NavbarInnerContainer = styled.div`
@@ -43,7 +46,6 @@ export const NavbarInnerContainer = styled.div`
 `;
 
 export const NavbarLogoBox = styled.div`
-  border: 2px solid green;
   grid-column: 4/10;
   grid-row: 1;
 
@@ -55,8 +57,6 @@ export const NavbarLogoBox = styled.div`
   }
 `;
 export const NavbarSearchBox = styled.div`
-  border: 2px solid red;
-
   grid-column: 1/4;
   grid-row: 1;
   @media ${minWidth.tablet} {
@@ -67,8 +67,6 @@ export const NavbarSearchBox = styled.div`
   }
 `;
 export const NavbarMenuBox = styled.div`
-  border: 2px solid blue;
-
   grid-column: 10/-1;
   grid-row: 1;
   @media ${minWidth.laptopL} {
@@ -76,8 +74,6 @@ export const NavbarMenuBox = styled.div`
   }
 `;
 export const NavbarNavigationBox = styled.div`
-  border: 2px solid yellow;
-
   grid-column: 1/-1;
   grid-row: 2;
   @media ${minWidth.laptopL} {

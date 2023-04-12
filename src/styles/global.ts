@@ -25,6 +25,7 @@ export default createGlobalStyle`
         }
         ::-webkit-scrollbar-thumb {
         }
+        font-family: 'Roboto', sans-serif;
     }
 
     #root {

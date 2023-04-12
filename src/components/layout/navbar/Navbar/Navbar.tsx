@@ -7,6 +7,10 @@ import {
   NavbarNavigationBox,
   NavbarSearchBox,
 } from './Navbar.style';
+import NavbarLogo from '../NavbarLogo/NavbarLogo';
+import NavbarMenu from '../NavbarMenu/NavbarMenu';
+import NavbarNavigation from '../NavbarNavigation/NavbarNavigation';
+import NavbarSearch from '../NavbarSearch/NavbarSearch';
 
 interface INavbarProps {
   show: boolean;
@@ -23,10 +27,18 @@ const Navbar: React.FC<INavbarProps> = ({ show }: INavbarProps) => {
       onMouseLeave={() => setShowOnHover(false)}
     >
       <NavbarInnerContainer>
-        <NavbarLogoBox />
-        <NavbarMenuBox />
-        <NavbarNavigationBox />
-        <NavbarSearchBox />
+        <NavbarLogoBox>
+          <NavbarLogo />
+        </NavbarLogoBox>
+        <NavbarMenuBox>
+          <NavbarMenu />
+        </NavbarMenuBox>
+        <NavbarNavigationBox>
+          <NavbarNavigation />
+        </NavbarNavigationBox>
+        <NavbarSearchBox>
+          <NavbarSearch />
+        </NavbarSearchBox>
       </NavbarInnerContainer>
     </NavbarContainer>
   );
