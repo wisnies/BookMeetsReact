@@ -2,17 +2,15 @@ import {
   NavbarSearchResultContainer,
   NavbarSearchResultInnerContainer,
 } from './NavbarSearchResult.style';
+import { useSearchContext } from '../../../../context/searchContext';
 
-interface INavbarSearchResultProps {
-  isOpen: boolean;
-}
-
-const NavbarSearchResult: React.FC<INavbarSearchResultProps> = ({
-  isOpen,
-}: INavbarSearchResultProps) => {
+const NavbarSearchResult: React.FC = () => {
+  const { navbarSearchPhrase } = useSearchContext();
   return (
-    <NavbarSearchResultContainer isOpen={isOpen}>
-      <NavbarSearchResultInnerContainer>aa</NavbarSearchResultInnerContainer>
+    <NavbarSearchResultContainer isOpen={navbarSearchPhrase.length > 0}>
+      <NavbarSearchResultInnerContainer>
+        {navbarSearchPhrase}
+      </NavbarSearchResultInnerContainer>
     </NavbarSearchResultContainer>
   );
 };
