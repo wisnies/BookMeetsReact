@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 // temp. solution without ui contetx
-import { lightTheme } from '../../../styles/lightTheme';
+import { lightTheme } from '../../../styles/themes';
 
 interface IThemeWrapperProps {
   children: React.ReactNode;

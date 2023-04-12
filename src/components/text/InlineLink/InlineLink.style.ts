@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { IThemeProps } from '../../../libs/interfaces/styles/IThemeProps';
 import { minWidth } from '../../../styles/devices';
-import { ITheme } from '../../../styles/lightTheme';
 
-interface IStyledInlineLinkProps {
+interface IStyledInlineLinkProps extends IThemeProps {
   color: string;
   weight: number;
-  theme: ITheme;
 }
 export const StyledInlineLink = styled(Link)<IStyledInlineLinkProps>`
   font-size: 16px;

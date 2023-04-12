@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import { IThemeProps } from '../../../../libs/interfaces/styles/IThemeProps';
 import { maxWidth, minWidth, size } from '../../../../styles/devices';
-import { ITheme } from '../../../../styles/lightTheme';
 
-interface INavbarContainerProps {
+interface INavbarContainerProps extends IThemeProps {
   show: boolean;
   showOnHover: boolean;
-  theme: ITheme;
 }
 export const NavbarContainer = styled.header<INavbarContainerProps>`
   position: fixed;
@@ -44,7 +43,6 @@ export const NavbarInnerContainer = styled.div`
     grid-template-rows: 1fr;
   }
 `;
-
 export const NavbarLogoBox = styled.div`
   grid-column: 4/10;
   grid-row: 1;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ITheme } from '../../../libs/interfaces/styles/ITheme';
 import { minWidth } from '../../../styles/devices';
-import { ITheme } from '../../../styles/lightTheme';
 
 const PHI = 1.618033988749894;
 

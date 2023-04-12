@@ -15,6 +15,11 @@ export default createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+    button {
+        border: none;
+        outline: none;
+        background: none;
+    }
     body {
         -webkit-font-smothing: antialiased;
         -moz-osx-font-smothing: grayscale;

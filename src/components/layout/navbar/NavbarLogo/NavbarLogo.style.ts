@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { IThemeProps } from '../../../../libs/interfaces/styles/IThemeProps';
 import { minWidth } from '../../../../styles/devices';
-import { ITheme } from '../../../../styles/lightTheme';
-
-interface IThemeProps {
-  theme: ITheme;
-}
 
 export const NavbarLogoContainer = styled(Link)<IThemeProps>`
   width: 100%;
@@ -21,7 +17,6 @@ export const NavbarLogoContainer = styled(Link)<IThemeProps>`
     }
   }
 `;
-
 const commonSpan = styled.span<IThemeProps>`
   font-size: 26px;
   height: fit-content;

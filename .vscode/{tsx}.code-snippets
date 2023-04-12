@@ -50,7 +50,7 @@
       "",
       "  return (",
       "    <Formik",
-      "      initialValues={intialValues}",
+      "      initialValues={initialValues}",
       "      validationSchema={validationSchema}",
       "      onSubmit={onSubmit}",
       "    >",
@@ -70,7 +70,7 @@
   "React Functional Component with connected form": {
     "prefix": "rfccf",
     "body": [
-      "import $1Form, {I$1FormValues} from './$1';",
+      "import $1Form, {I$1FormValues} from './$1Form';",
       "",
       "const Connected$1Form:React.FC = () => {",
       "",
